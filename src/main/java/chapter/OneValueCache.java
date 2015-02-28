@@ -24,7 +24,7 @@ public class OneValueCache {
 	}
 
 	public BigInteger[] getLastFactors(BigInteger i){
-		if(lastNumber != null || !lastNumber.equals(i)){
+		if(lastNumber == null || !lastNumber.equals(i)){
 			return null;
 		}
 		else{

@@ -23,7 +23,15 @@ public class VolatileCachedFactorizer implements Servlet {
 		BigInteger bid = BigInteger.valueOf(id);
 		BigInteger[]  fac = cache.getLastFactors(bid);
 		if(fac != null){
-
+			System.out.println("cache info");
+			for (BigInteger i : fac) {
+				System.out.println(i);
+			}
+		}
+		else{
+			BigInteger[] newfac = new BigInteger[]{BigInteger.valueOf(1l), BigInteger.valueOf(2l)};
+			cache = new OneValueCache(bid, newfac);
+			System.out.println("not cache");
 		}
 	}
 	public void init(ServletConfig servletConfig) throws ServletException {
