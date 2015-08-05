@@ -12,6 +12,7 @@ public class LogginWidge extends Widge
     @Override
     public synchronized void dosomething()
         throws InterruptedException
+
     {
         System.out.println(Thread.currentThread().getName()+"child");
         super.dosomething();
