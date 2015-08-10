@@ -9,19 +9,31 @@ import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
 
 /**
+ * The type Echo server.
  * @author liming
- * @since 2015/8/4
+ * @since 2015 /8/4
  */
 public class EchoServer
 {
     private int port;
 
-
+    /**
+     * Instantiates a new Echo server.
+     *
+     * @param port the port
+     */
     public EchoServer(int port)
     {
         this.port = port;
     }
 
+    /**
+     * Start int.
+     *
+     * @author liming
+     * @return the int
+     * @throws InterruptedException the interrupted exception
+     */
     public void start() throws InterruptedException
     {
         EventLoopGroup group = new NioEventLoopGroup();
@@ -56,6 +68,12 @@ public class EchoServer
         }
     }
 
+    /**
+     * The entry point of application.
+     *
+     * @param args the input arguments
+     * @throws InterruptedException the interrupted exception
+     */
     public static void main(String[] args)
         throws InterruptedException
     {
