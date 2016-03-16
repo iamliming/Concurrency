@@ -1,6 +1,7 @@
 package basic;
 
 import java.util.Arrays;
+import java.util.Date;
 
 import domain.Baoma;
 import domain.Vehicle;
@@ -13,6 +14,8 @@ public class Arrayexample
 {
     public static void main(String[] args)
     {
+        Date date = new Date(1453894604876l);
+        System.out.println(date);
         Integer[] ints = new Integer[10];
         Arrays.fill(ints, 10);
         System.out.println(Arrays.toString(ints));

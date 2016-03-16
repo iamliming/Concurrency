@@ -14,14 +14,14 @@ import java.util.concurrent.locks.ReentrantLock;
 public class DeadLock {
 
 	public static void main(String[] args) throws InterruptedException {
-		//		Friend f = new Friend("Tony");
-		//		Friend b = new Friend("Mike");
+				Friend f = new Friend("Tony");
+				Friend b = new Friend("Mike");
 
 //		FriendUsingLock f = new FriendUsingLock("Tony");
 //		FriendUsingLock b = new FriendUsingLock("Mike");
 
-		FriendCanBow f = new FriendCanBow("Tony");
-		FriendCanBow b = new FriendCanBow("Mike");
+		//FriendCanBow f = new FriendCanBow("Tony");
+		//FriendCanBow b = new FriendCanBow("Mike");
 
 		Runnable t = () -> {
 			f.bow(b);

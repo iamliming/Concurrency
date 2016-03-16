@@ -27,6 +27,7 @@ public class BlockQueueTest {
 				try {
 					System.out.println("product input "+cake);
 					queue.put(cake);
+                    Thread.sleep(10000l);
 				} catch (InterruptedException e) {
 					System.out.println();
 					e.printStackTrace();
@@ -38,10 +39,11 @@ public class BlockQueueTest {
 			for(;;){
 				try {
 					String cake = queue.take();
-					System.out.println("comsumer:"+cake);
+					System.out.println(Thread.currentThread()+"comsumer:"+cake);
 					if(cake.equals("cake19")){
 						return;
 					}
+                    Thread.sleep(10000l);
 				} catch (InterruptedException e) {
 					e.printStackTrace();
 				}
@@ -52,7 +54,7 @@ public class BlockQueueTest {
 		ExecutorService service = Executors.newFixedThreadPool(2);
 		List<Runnable> tasks = new ArrayList<>();
 //		tasks.add(product);
-//		tasks.add(comsumber);
+		tasks.add(comsumber);
 		service.submit(product);
 		service.submit(comsumber);
 		service.shutdown();
