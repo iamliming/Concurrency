@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="wordcount">
+    <output-path>$PROJECT_DIR$/classes/artifacts/wordcount</output-path>
+    <root id="archive" name="wordcount.jar">
+      <element id="file-copy" path="$PROJECT_DIR$/target/classes/hadoop/WordCount$TokenizerMapper.class" />
+      <element id="file-copy" path="$PROJECT_DIR$/target/classes/hadoop/WordCount$IntSumReducer.class" />
+      <element id="file-copy" path="$PROJECT_DIR$/target/classes/hadoop/WordCount.class" />
+    </root>
+  </artifact>
+</component>
