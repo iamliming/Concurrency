@@ -18,7 +18,12 @@ import domain.PersonMsg;
  */
 public class ProtoBufSerialize
 {
-    public static void main(String[] args)
+    public static void main(String[] args){
+        long l = 100000000000l;
+        System.out.println(100-9>0);
+        System.out.println(l*10000);
+    }
+    public static void main1(String[] args)
         throws IOException
     {
         FileOutputStream fs = new FileOutputStream("googlebufSerialize.txt");
@@ -32,6 +37,7 @@ public class ProtoBufSerialize
             personBuilder.setName("Tony" + i);
             personBuilder.setEmail(i + "@163.com");
             PersonMsg.Person person = personBuilder.build();
+            person.toByteArray();
             //将数据写到输出流
             person.writeDelimitedTo(os);
             if(i % 100000 == 0 || i == 999999){
